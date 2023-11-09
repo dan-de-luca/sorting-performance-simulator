@@ -7,18 +7,21 @@ from quick_sort import quick_sort
 from heap_sort import heap_sort
 from radix_sort import radix_sort
 
-# Example arrays
-small_array_1 = [5, 2, 9, 1, 5]
-small_array_2 = [3, 1]
-small_array_3 = [9, 8, 7, 6, 5, 4, 3, 2, 1]
+# Example arrays for comparing sorting algorithm performance:
+# Small arrays (100 elements):
+positive_small_array = [i for i in range (1, 101)] # Positive integers
+negative_small_array = [i for i in range (-100, 0)] # Negative integers
+mixed_small_array = [i for i in range (-50, 51)] # Positive and negative integers
 
-medium_array_1 = [38, 27, 43, 3, 9, 82, 10, 19, 42, 55]
-medium_array_2 = [64, 34, 25, 12, 22, 11, 90, 87, 76, 42, 55, 68]
-medium_array_3 = [93, 28, 67, 41, 55, 60, 72, 89, 97, 13, 47, 25, 33]
+# Medium arrays (1,000 elements):
+positive_medium_array = [i for i in range(1, 1001)] # Positive integers
+negative_medium_array = [i for i in range(-1000, 0)] # Negative integers
+mixed_medium_array = [i for i in range(-500, 501)] # Positive and negative integers
 
-large_array_1 = [i for i in range(1000, 0, -1)]
-large_array_2 = [i for i in range(1, 10001)]
-large_array_3 = [i for i in range(10000, 0, -1)]
+# Large arrays (10,000 elements):
+positive_large_array = [i for i in range(1, 10001)] # Positive integers
+negative_large_array = [i for i in range(-10000, 0)] # Negative integers
+mixed_large_array = [i for i in range(-5000, 5001)] # Positive and negative integers
 
 # Sorting algorithms to test
 sorting_algorithms = {
@@ -31,13 +34,14 @@ sorting_algorithms = {
     "Radix Sort": radix_sort
 }
 
-# Test and measure the performance of sorting algorithms
+# Test and measure the performance of sorting algorithm implementations
 for algorithm_name, sorting_algorithm in sorting_algorithms.items():
     print(f"Testing {algorithm_name}...")
-    arrays = [small_array_1, small_array_2, small_array_3,
-            medium_array_1, medium_array_2, medium_array_3,
-            large_array_1, large_array_2, large_array_3]
+    arrays = [positive_small_array, negative_small_array, mixed_small_array,
+            positive_medium_array, negative_medium_array, mixed_medium_array,
+            positive_large_array, negative_large_array, mixed_large_array]
 
+    # Test each array and measure the execution time
     total_time = 0
     for idx, array in enumerate(arrays):
         start_time = time.time()
