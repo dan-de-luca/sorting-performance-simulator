@@ -1,6 +1,6 @@
-# &nbspSorting Algorithm Performance Simulator
+# &nbsp;Sorting Algorithm Performance Simulator
 
-## &nbspOverview
+## &nbsp;Overview
 
 Simulation & performance comparison of basic implementations of the following commonly used sorting algorithms:
 
@@ -26,10 +26,10 @@ Simulation & performance comparison of basic implementations of the following co
   (MSD) or vice versa depending on the desired final order. Complexity - Time: Worst, Avg. & Best-case = `O(nk)`, Space: `O(n + k)` as radix sort requires additional
   space for counting & output arrays, where `k` is the number of digits.
 
-### &nbspInputs
+### &nbsp;Inputs
 
 Sorting algorithm performance is compared using several small (100 elements), medium (1,000 elements) & large (10,000 elements) arrays as input.
 
-### &nbspPerformance
+### &nbsp;Performance
 
 Sorting algorithm performance is measured in seconds.
